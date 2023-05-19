@@ -15,7 +15,7 @@ import './assets/styles/index.css';
 
 import App from './App';
 import HomeScreen from './screens/HomeScreen';
-import ProductScreen from './components/ProductScreen';
+import ProductScreen from './screens/ProductScreen';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
