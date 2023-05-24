@@ -12,7 +12,6 @@ export const productsApiSlice = apiSlice.injectEndpoints({
     getProductDetails: builder.query({
       query: (productId) => {
         const url = `${PRODUCTS_URL}/${productId}`;
-        console.log(url);  // Log the URL
         return { url };
       },
       keepUnusedDataFor: 5,
