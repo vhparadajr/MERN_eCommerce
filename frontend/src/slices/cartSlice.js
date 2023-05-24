@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialCart = localStorage.getItem("cartItems")
-
+const initialCart = localStorage.getItem("cart")
 const initialState = initialCart ? JSON.parse(initialCart) : {cartItems: []};
 
 const addDecimals = (num) => {
@@ -15,7 +14,7 @@ const cartSlice = createSlice({
     addToCart: (state, action) => {
       const item = action.payload;
       const existItem = state.cartItems.find((x) => x._id === item._id);
-
+      
       !!existItem 
         ? state.cartItems.map((x) => x._id === existItem._id ? item : x) 
         : state.cartItems = [...state.cartItems, item];
